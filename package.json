@@ -1,0 +1,30 @@
+{
+  "name": "growthproai",
+  "version": "1.0.0",
+  "description": "GrowthProAI - AI-powered business dashboard generator",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm run preview",
+    "build": "cd frontend && npm run build",
+    "optimize": "node scripts/optimize.js",
+    "check": "npm run optimize",
+    "deploy-prep": "chmod +x scripts/deploy.sh && ./scripts/deploy.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["business", "dashboard", "ai", "react", "express"],
+  "author": "GrowthProAI",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+} 

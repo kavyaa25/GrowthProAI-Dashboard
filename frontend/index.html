@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://www.growthproai.com/images/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>GrowthProAI - AI-Powered Business Dashboard & SEO Headline Generator</title>
+    <meta name="title" content="GrowthProAI - AI-Powered Business Dashboard & SEO Headline Generator">
+    <meta name="description" content="Generate AI-powered business insights, SEO headlines, and analytics for your local business. Free dashboard with growth recommendations and competitor analysis.">
+    <meta name="keywords" content="business dashboard, SEO headlines, local business, AI insights, business analytics, growth recommendations">
+    <meta name="author" content="GrowthProAI">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://growthproai.vercel.app/">
+    <meta property="og:title" content="GrowthProAI - AI-Powered Business Dashboard">
+    <meta property="og:description" content="Generate AI-powered business insights, SEO headlines, and analytics for your local business.">
+    <meta property="og:image" content="https://growthproai.vercel.app/og-image.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://growthproai.vercel.app/">
+    <meta property="twitter:title" content="GrowthProAI - AI-Powered Business Dashboard">
+    <meta property="twitter:description" content="Generate AI-powered business insights, SEO headlines, and analytics for your local business.">
+    <meta property="twitter:image" content="https://growthproai.vercel.app/og-image.png">
+    
+    <!-- PWA Support -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="GrowthProAI">
+    <link rel="apple-touch-icon" href="/icon-192x192.png">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "GrowthProAI Dashboard",
+      "description": "AI-powered business insights and SEO headline generator for local businesses",
+      "url": "https://growthproai.vercel.app",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Service Worker Registration for PWA -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
